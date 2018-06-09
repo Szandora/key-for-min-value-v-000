@@ -3,6 +3,7 @@
 
 def key_for_min_value(weight_log)
   weight_log = {monday: 170, tuesday: 169, wednesday: 168, thursday: 167, friday: 166}
-  weight_log.min_by{|a,b| a}
+  weight_log.each do |day, weight|
+    weight(lowest)
 
 end
