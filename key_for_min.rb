@@ -1,15 +1,13 @@
 # prereqs: iterators, hashes, conditional logic
 # Given a hash with numeric values, return the key for the smallest value
-
-def key_for_min_value(weight_log)
-  min_key = nil
-  min_value = Float::INFINITY
-  weight_log = {monday: 170, tuesday: 169, wednesday: 168, thursday: 167, friday: 166}
-  weight_log.each do |day, weight|
-    if weight < min_value
-      min_value = weight
-      min_key = day
+def key_for_min_value(hash)
+  lowest_key = nil
+  lowest_value = Float::INFINITY
+  hash.each do |k, v|
+    if v < lowest_value
+      lowest_value = v
+      lowest_key = k
     end
   end
-  min_key
+  lowest_key
 end
